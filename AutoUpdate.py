@@ -1,4 +1,4 @@
-print("Updater V1, credit to: homenko25032011@gmail.com")
+print("Updater V1, credit to: (discord) sania212")
 
 from requests import get
 import os

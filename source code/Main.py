@@ -18,7 +18,11 @@ Sharpness - 1
 При "Save as" писать расширение не надо, расширения предопределено - .jpg
 Если ваш сохранённый файл не показывается,
 то обновите список доступных файлов "Update dir of files"
-Это самый первый релиз программы, далее она будет обновляться
+Чтобы обновить программу:
+1: выключите программу
+2: запустите файл Update.exe
+3: при обнаружении обновления программа спросит вас: "Update found, are you want to install update? (T or F):", для продолжения напишите T и нажмите Enter
+4: снова запустите Main.exe
 Мой discord для связи - sania212
 -------------------------------------------------------------------------------------------------------------------
 ''')
@@ -29,33 +33,10 @@ from tkinter.ttk import Combobox
 from PIL import Image,ImageTk,ImageEnhance,ImageFilter
 import os
 from tqdm import tqdm
-import githubdl
-#Updater V3, credit to: (discord) sania212
-print("Updater V3, credit to: (discord) sania212")
 window = Tk()
 window["bg"] = "black"
 window.title("PythonShop")
-window.geometry('900x650')
-try:
-    githubdl.dl_file("https://github.com/HOMENYK/Redactor-python-", "Main.exe", "Main_temp.exe", github_token="...")
-except:
-    print("Bad internet connection")
-print("Checking for updates, please wait...")
-Mfile = open("Main.exe", "rb")
-Current_code = Mfile.read()
-Mfile.close()
-Mfile2 = open("Main_temp.exe", "rb")
-Git_code = Mfile2.read()
-Mfile2.close()
-if(Git_code == Current_code):
-    print("Your version already up to date")
-    os.remove("Main_temp.exe")
-else:
-    if(str(input("Update found, are you want to install update? (T or F): ")) == "T"):
-        window.destroy
-        os.system("AutoUpdate.exe")
-    else:
-        pass
+window.geometry('1500x650')
 def Saved():
     lbl2=Label(window, text='Saved!', font=('Arial Bold', 8, ), bg='grey',fg='white')
     lbl2.place(x=70,y=25)

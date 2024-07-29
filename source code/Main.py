@@ -30,7 +30,7 @@ from PIL import Image,ImageTk,ImageEnhance,ImageFilter
 import os
 from tqdm import tqdm
 import githubdl
-#Updater V3, credit to: (discord) sania212"
+#Updater V3, credit to: (discord) sania212
 print("Updater V3, credit to: (discord) sania212")
 window = Tk()
 window["bg"] = "black"

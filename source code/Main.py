@@ -49,6 +49,7 @@ Git_code = Mfile2.read()
 Mfile2.close()
 if(Git_code == Current_code):
     print("Your version already up to date")
+    os.remove("Main_temp.exe")
 else:
     if(str(input("Update found, are you want to install update? (T or F): ")) == "T"):
         window.destroy

@@ -35,7 +35,7 @@ print("Updater V3, credit to: (discord) sania212")
 window = Tk()
 window["bg"] = "black"
 window.title("PythonShop")
-window.geometry('1000x700')
+window.geometry('900x650')
 try:
     githubdl.dl_file("https://github.com/HOMENYK/Redactor-python-", "Main.exe", "Main_temp.exe", github_token="...")
 except:
@@ -51,8 +51,8 @@ if(Git_code == Current_code):
     print("Your version already up to date")
 else:
     if(str(input("Update found, are you want to install update? (T or F): ")) == "T"):
-        os.system("AutoUpdate.exe")
         window.destroy
+        os.system("AutoUpdate.exe")
     else:
         pass
 def Saved():
